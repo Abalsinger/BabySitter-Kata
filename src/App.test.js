@@ -1,8 +1,17 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, fireEvent } from '@testing-library/react';
+import CalculatorForm from './components/calculatorForm';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+
+it("Checking Render", () => {
+    const { queryByTitle } = render(<CalculatorForm />);
+    const form = queryByTitle("chargeForm");
+    const inputStart = queryByTitle("startBedtime");
+    const inputMid = queryByTitle("bedtimeMid");
+    const inputEnd = queryByTitle("midEnd");
+    const button = queryByTitle("submitButton")
+    expect(form).toBeInTheDocument();
+    expect(inputStart).toBeInTheDocument();
+    expect(inputMid).toBeInTheDocument();
+    expect(inputEnd).toBeInTheDocument();
+    expect(button).toBeInTheDocument();
+})
