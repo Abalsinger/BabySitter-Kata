@@ -17,6 +17,9 @@
 .env.development.local
 .env.test.local
 .env.production.local
+.vs/BabySitter-Kata/v16/.suo
+.vs/VSWorkspaceState.json
+.vs/slnx.sqlite
 
 npm-debug.log*
 yarn-debug.log*
