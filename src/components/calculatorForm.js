@@ -45,23 +45,23 @@ const CalculatorForm = () => {
     };
 
     return (
-        <div>
-            <h1>Time Form</h1>
+        <div class="formDiv">
+            <h1>Nightly Charge Calculator</h1>
             <form title="chargeForm">
-                <div>
-                    <label>start to bedtime</label>
+                <div class="formInput">
+                    <label>Number of Hours from Start to Bedtime</label>
                     <input title="startBedtime" onChange={(e) => setStartBedtime(e.target.value)} type="text" />
                 </div>
-                <div>
-                    <label>bedtime to Midnight</label>
+                <div class="formInput">
+                    <label>Number of Hours from Bedtime to Midnight</label>
                     <input title="bedtimeMid" onChange={(e) => setBedtimeMidnight(e.target.value)} type="text" />
                 </div>
-                <div>
-                    <label>Midnight to End</label>
+                <div class="formInput">
+                    <label>Number of Hours from Midnight to End</label>
                     <input title="midEnd" onChange={(e) => setMidnightEnd(e.target.value)} type="text" />
                 </div>
-                <button title="submitButton" onClick={(e) => submitCalculation(e)}>Calculate</button>
             </form>
+            <button title="submitButton" onClick={(e) => submitCalculation(e)}>Calculate</button>
             <h3>Total Charge: ${nightlyCharge.toFixed(2)}</h3>
         </div>
     );
